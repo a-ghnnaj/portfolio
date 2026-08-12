@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مشروع أنس الشخصي، موقع يعرض أعماله ومشاريعه وسيرته الذاتية.">
+  <meta name="keywords" content="أنس, موقع شخصي, portfolio, مشاريع, أعمال, سيرة الذاتية">
+  <title>موقع أنس | معرض أعمال شخصي</title>
+
+  <!-- 1. ملف Normalize أولاً -->
+  <link rel="stylesheet" href="styles/Normalize.css">
+
+  <link rel="stylesheet" href="styles/style.css">
+
+  <link rel="icon" href="images/page's icon.png">
+
+  <!-- 3. رابط Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Start of header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img id="first-logo" src="images/page's icon.png" alt="شعار الموقع">
+        </a>
+      </div>
+
+      <nav>
+        <i class="fa-solid fa-bars nav-toggle"></i>
+        <ul>
+          <li>
+            <a href="#about">
+              <i class="fa-solid fa-circle-info"></i> عن أنس
+            </a>
+          </li>
+          <li>
+            <a href="#skills">
+              <i class="fa-solid fa-user-gear"></i>المهارات
+            </a>
+          </li>
+          <li>
+            <a href="#projects">
+              <i class="fa-solid fa-diagram-project"></i> مشاريعي
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <i class="fa-solid fa-envelope"></i> اتصل بي
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- end of header -->
+
+  <!-- start of hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-info">
+        <h1>أنس غناج</h1>
+        <h2>طالب هندسة معلوماتية | مهتم بتطوير الويب وحل المشكلات البرمجية</h2>
+        <p>طالب في السنة الثانية تستهويني لغة C++، وأعمل حالياً على تطوير مهاراتي في بناء واجهات الويب (Front-End) وتطبيق ما أتعلمه عملياً.</p>
+        <div class="hero-btn">
+          <a href="#about" class="btn primary-btn">
+            <i class="fa-solid fa-user-gear"></i> تعرف علي
+          </a>
+          <a href="#contact" class="btn secondary-btn">
+            <i class="fa-solid fa-envelope"></i> اتصل بي
+          </a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="images/Personal-picture.png" alt="صورة أنس">
+      </div>
+    </div>
+  </section>
+  <!-- end of hero -->
+
+  <!-- Start About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>المعلومات الشخصية</h2>
+        <p>تعرّف علي وعلى مساري الأكاديمي والتقني</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Card 1: Bio -->
+        <div class="about-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-user-gear"></i>
+          </div>
+          <h3>نبذة عني</h3>
+          <p>
+            طالب في الهندسة المعلوماتية، مهتم ببناء واجهات الويب الحديثة، حل المشكلات البرمجية، وفهم البنى التحتية
+            للشبكات وأمن البيانات. أسعى لتطوير مهاراتي يومياً عبر المشاريع والتطبيقات العملية.
+          </p>
+        </div>
+
+        <!-- Card 2: Academic -->
+        <div class="about-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3>المسار الأكاديمي</h3>
+          <p>
+            <strong>التخصص:</strong> بكالوريوس في الهندسة المعلوماتية<br>
+            <strong>الجامعة:</strong> الجامعة الوطنية الخاصة<br>
+            <strong>التركيز الحالي:</strong> هياكل البيانات والخوارزميات (Data Structures & Algorithms)، البرمجة كائنية التوجه (OOP)، ولغة C++.
+          </p>
+        </div>
+
+        <!-- Card 3: Interests -->
+        <div class="about-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3>الاهتمامات البرمجية</h3>
+          <ul class="skills-list">
+            <li>تطوير واجهات المستخدم (HTML5 / CSS3)</li>
+            <li>حل المشكلات والبرمجة التنافسية</li>
+            <li>أمن البيانات وتشفير الاتصالات (VPNs)</li>
+            <li>أنظمة التشغيل وإعدادات الحواسيب</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+<!-- Start Skills Section -->
+<section class="skills" id="skills">
+  <div class="container">
+    
+    <!-- عنوان القسم فقط -->
+    <div class="section-title">
+      <h2>المهارات والأدوات <i class="fa-solid fa-screwdriver-wrench"></i></h2>
+      <p>التقنيات التي أستخدمها والأدوات التي أعمل على إتقانها</p>
+    </div>
+
+    <!-- محتوى المهارات -->
+    <div class="skills-content">
+      
+      <!-- التقنيات الحالية -->
+      <div class="tools">
+        <h3>التقنيات والأدوات الحالية:</h3>
+        <ul class="skills-badges">
+          <li>C++ <i class="fa-solid fa-code"></i></li>
+          <li>HTML5 <i class="fa-brands fa-html5"></i></li>
+          <li>CSS3 <i class="fa-brands fa-css3-alt"></i></li>
+          <li>Git & GitHub <i class="fa-brands fa-git-alt"></i></li>
+          <li>VS Code <i class="fa-solid fa-laptop-code"></i></li>
+        </ul>
+      </div>
+
+      <!-- قيد التعلم -->
+      <div class="learning">
+        <h3>قيد التعلم والتركيز الحالي:</h3>
+        <ul class="skills-badges">
+          <li>JavaScript (JS) <i class="fa-brands fa-js"></i></li>
+          <li>Responsive Design <i class="fa-solid fa-mobile-screen-button"></i></li>
+          <li>Front-End Development <i class="fa-solid fa-layer-group"></i></li>
+        </ul> <!-- تم إضافة الإغلاق هنا -->
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- End Skills Section -->
+ <!-- Start Projects Section -->
+ <section class="projects" id="projects">
+  <div class="container">
+    <!-- عنوان القسم -->
+     <div class="section-title">
+    <h2>مشاريعي<i class="fa-solid fa-diagram-project"></i></h2>
+    <p>المشروع الحالي والخطة المستقبلية للمشاريع القادمة</p>
+  </div>
+  <!-- 1. المشروع الحالي المميز -->
+   <div class="current-project">
+   </div>
+  </div>
+ </section>
+ <!-- End Projects Section -->
+</body>
+</html>
