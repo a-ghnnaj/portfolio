@@ -757,22 +757,39 @@ header nav ul a i {
 }
 /* end contact section */
 
-/* starat footer  */
+/* start footer */
 footer {
-  background-color: var(--secondary-color3);
+  background-color: var(--secondary-color3); /* خلفية كحلية متناسقة مع الهيدر */
   color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-  border-top: 1px solid var(--secondary-color2);
+  padding: 25px 0;
+  margin-top: 40px;
 }
 
-footer p {
-  font-size: 0.9rem;
-  margin: 0;
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-footer strong {
-  color: var(--main-color);
+.back-to-top-static {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-/* end footer  */
+
+.back-to-top-static:hover {
+  background-color: #ffffff;
+  color: var(--secondary-color3);
+  transform: translateY(-2px);
+}
+/* end footer */
 
