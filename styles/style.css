@@ -40,7 +40,7 @@ body {
     radial-gradient(at 50% 50%, rgba(249, 251, 253, 0.8) 0px, transparent 50%),
     radial-gradient(at 100% 100%, rgba(126, 187, 204, 0.3) 0px, transparent 50%),
     radial-gradient(at 0% 100%, rgba(43, 93, 127, 0.15) 0px, transparent 50%);
-  background-attachment: fixed; /* تثبيت الخلفية عند التمرير */
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -66,7 +66,7 @@ img {
 a {
   color: var(--secondary-color3);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 a:hover {
@@ -121,11 +121,12 @@ header .container {
 }
 
 #first-logo {
-  width: 150px;
-  height: auto;
+  max-height: 50px;
+  width: auto;
   margin-right: 10px;
   display: block;
-  transition: transform 0.3s ease;
+  object-fit: contain;
+  transition: transform 0.5s ease;
 }
 
 header .logo a {
@@ -158,7 +159,8 @@ header nav ul a {
   color: var(--secondary-color3);
   font-weight: 700;
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 15px;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header nav ul a:hover {
@@ -180,7 +182,6 @@ header nav ul a i {
 
 /* ================= Responsive Header (Mobile) ================= */
 @media (max-width: 767px) {
-  /* 1. إظهار زر التوغل */
   .nav-toggle {
     display: block !important;
     font-size: 24px;
@@ -189,19 +190,17 @@ header nav ul a i {
     padding: 5px;
   }
 
-  /* 2. جعل عنصر nav هو المرجع للقائمة المنسدلة */
   header nav {
     position: relative;
   }
 
-  /* 3. تنسيق القائمة المنسدلة وأبعادها */
   header nav ul {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0; /* في RTL تكون القائمة جهة اليسار */
-    min-width: 180px; /* ضمان عرض مريح للقائمة يمنع انكماش النص */
+    left: 0;
+    min-width: 180px;
     background-color: var(--main-color);
     border: 1px solid var(--secondary-color1);
     border-radius: 8px;
@@ -210,17 +209,15 @@ header nav ul a i {
     z-index: 1000;
   }
 
-  /* 4. إجبار العناصر والروابط على أخذ العرض الكامل لمنع ظهور المربع الفارغ */
   header nav ul li {
     width: 100%;
   }
 
   header nav ul a {
     width: 100%;
-    white-space: nowrap; /* منع التفاف أو اختفاء النص داخل الرابط */
+    white-space: nowrap;
   }
 
-  /* 5. إظهار القائمة بالكامل عند الهوفر على زر nav أو القائمة نفسها */
   header nav:hover ul {
     display: flex;
   }
@@ -230,35 +227,13 @@ header nav ul a i {
   }
 }
 
-/* ================= Projects Section ================= */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.project-card {
-  background-color: #ffffff;
-  border: 1px solid var(--secondary-color1);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
 /* ================= Hero Section ================= */
 .hero {
   background-color: var(--main-color);
   padding: 60px 0;
-  position: relative; /* تم تصحيح الخطأ الإملائي */
+  position: relative;
 }
 
-/* تحويل الحاوية إلى Flexbox لتوزيع النص والصورة بجانب بعضهما */
 .hero .container {
   display: flex;
   align-items: center;
@@ -287,7 +262,6 @@ header nav ul a i {
   color: #444;
 }
 
-/* تنسيق الصورة التجاوبي */
 .hero-img {
   flex-shrink: 0;
   display: flex;
@@ -295,21 +269,63 @@ header nav ul a i {
 }
 
 .hero-img img {
-  position: static; /* إلغاء التموضع المباشر */
+  position: static;
   width: 100%;
-  max-width: 280px; /* الحد الأقصى لحجم الصورة على الشاشات الكبيرة */
+  max-width: 280px;
   height: auto;
   border-radius: 15%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ================= Responsive (Mobile) ================= */
+.hero-btn {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* ================= Shared Buttons ================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.primary-btn {
+  background-color: var(--secondary-color3);
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  background-color: var(--secondary-color2);
+  color: rgba(0, 0, 0, 0.77);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.secondary-btn {
+  border: 2px solid var(--secondary-color3);
+  background-color: transparent;
+  color: var(--secondary-color3);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+  background-color: var(--secondary-color3);
+  color: #ffffff;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
 @media (max-width: 767px) {
   .hero {
     padding: 40px 0;
   }
 
-  /* ترتيب العناصر رأسياً على الشاشات الصغيرة */
   .hero .container {
     flex-direction: column-reverse; 
     text-align: center;
@@ -317,7 +333,7 @@ header nav ul a i {
   }
 
   .hero-img img {
-    max-width: 180px; /* تصغير حجم الصورة يناسب الهواتف */
+    max-width: 180px;
   }
 
   .hero h1 {
@@ -365,7 +381,6 @@ header nav ul a i {
   margin-top: 10px;
 }
 
-/* Grid Layout */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -377,7 +392,8 @@ header nav ul a i {
   border: 1px solid var(--secondary-color1);
   border-radius: 10px;
   padding: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
 }
 
 .about-card:hover {
@@ -385,7 +401,7 @@ header nav ul a i {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-.card-icon {
+.about-card .card-icon {
   font-size: 28px;
   color: var(--secondary-color3);
   background-color: var(--main-color);
@@ -410,7 +426,6 @@ header nav ul a i {
   line-height: 1.7;
 }
 
-/* Skills List inside Card */
 .skills-list {
   padding-right: 0;
 }
@@ -431,7 +446,6 @@ header nav ul a i {
   font-size: 12px;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 767px) {
   .about {
     padding: 40px 0;
@@ -441,50 +455,6 @@ header nav ul a i {
     grid-template-columns: 1fr;
   }
 }
-
-.hero-btn {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* مسافة مريحة بين الأيقونة والنص */
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-/* الزر الرئيسي */
-.primary-btn {
-  background-color: var(--secondary-color3);
-  color: #ffffff;
-}
-
-.primary-btn:hover {
-  transform: translateY(-3px);
-  background-color: var(--secondary-color2);
-  color:rgba(0, 0, 0, 0.77);
-}
-
-/* الزر الثانوي */
-.secondary-btn {
-  border: 2px solid var(--secondary-color3);
-  background-color: transparent;
-  color: var(--secondary-color3);
-}
-
-.secondary-btn:hover {
-  transform: translateY(-3px);
-  background-color: var(--secondary-color3);
-  color: #ffffff; /* تحول لون النص للأبيض ليتناسب مع الخلفية الداكنة */
-}
-
 
 /* ================= Skills Section ================= */
 .skills {
@@ -505,6 +475,7 @@ header nav ul a i {
   margin-bottom: 12px;
   color: var(--secondary-color3);
 }
+
 .skills-badges {
   list-style: none;
   padding: 0;
@@ -523,7 +494,8 @@ header nav ul a i {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition:all 0.3s ease;
+  transition: all 0.5s ease;
+   cursor: pointer;
 }
 
 .skills-badges li:hover {
@@ -532,15 +504,14 @@ header nav ul a i {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-/* ================= End Skills Section ================= */
 
 /* ================= Projects Section ================= */
-
 .projects {
   padding: 60px 0;
   background-color: var(--main-color);
 }
 
+.projects-grid,
 .upcoming-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -548,7 +519,19 @@ header nav ul a i {
   margin-top: 30px;
 }
 
-/* بطاقة المشروع الرئيسي */
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid var(--secondary-color1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 .featured-card {
   background-color: #ffffff;
   border: 1px solid var(--secondary-color1);
@@ -556,11 +539,11 @@ header nav ul a i {
   padding: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
   margin-bottom: 30px;
+   cursor: pointer;
 }
 
-/* --- تنسيق الشارات (Badges) --- */
 .badge {
-  display: inline-flex; /* تم التغيير من inline-block ليعمل align-items و gap */
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
@@ -570,21 +553,18 @@ header nav ul a i {
   margin-bottom: 15px;
 }
 
-/* شارة المشروع المكتمل (أخضر هادئ ناعم) */
 .status-active {
   background-color: #e6f4ea;
   color: #137333;
   border: 1px solid #ceead6;
 }
 
-/* شارة المشروع القادم (أزرق هادئ ناعم) */
 .status-planned {
   background-color: #e8f0fe;
   color: #1a73e8;
   border: 1px solid #d2e3fc;
 }
 
-/* --- أزرار الروابط --- */
 .project-links {
   display: flex;
   flex-wrap: wrap;
@@ -592,40 +572,13 @@ header nav ul a i {
   margin-top: 25px;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.primary-btn {
-  background-color: var(--secondary-color3); /* ربط الزر بلون الهوية الرئيسي */
-  color: #ffffff;
-}
-
-.secondary-btn {
-  border: 1px solid var(--secondary-color3);
-  background-color: transparent;
-  color: var(--secondary-color3);
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
-}
-
-/* --- بطاقات المشاريع القادمة --- */
 .upcoming-card {
   background-color: #ffffff;
   border: 1px dashed var(--secondary-color2);
   border-radius: 12px;
   padding: 22px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+   cursor: pointer;
 }
 
 .upcoming-card:hover {
@@ -645,4 +598,181 @@ header nav ul a i {
   margin-top: 15px;
   font-weight: 500;
 }
+
+/* ================= Development Principles Section ================= */
+.development-principles {
+  padding: 60px 0;
+  background-color: var(--main-color);
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.principle-card {
+  background-color: #ffffff;
+  border: 1px solid var(--secondary-color1);
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.principle-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--secondary-color3);
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.principle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.principle-card:hover::before {
+  transform: scaleX(1);
+}
+
+.principle-card .card-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--main-color);
+  color: var(--secondary-color3);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  border: 1px solid var(--secondary-color1);
+  transition: all 0.5s ease;
+}
+
+.principle-card:hover .card-icon {
+  background-color: var(--secondary-color3);
+  color: #ffffff;
+}
+
+.principle-card h3 {
+  font-size: 1.15rem;
+  color: var(--secondary-color3);
+  margin-bottom: 12px;
+}
+
+.principle-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555555;
+}
+/* end principle section */
+
+
+/* start contact section */
+.contact {
+  padding: 60px 0;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* يتكفل بتوسيط عناصر الصف الأخير تماماً */
+  gap: 20px;
+  padding: 35px 25px; 
+  margin-top: 35px;
+  background-color: var(--main-color); /* الخلفية الزرقاء */
+  border-radius: 16px
+}
+
+.contact-card {
+  /* تجعل البطاقة مرنة: الحد الأدنى للعرض 220px وتتمدد عند الحاجة */
+  flex: 1 1 220px; 
+  
+  /* يمنع كروت الصف الأخير من التمدد بشكل مفرط ويحافظ على تناسق الحجم */
+  max-width: 270px; 
+  
+  background-color: #ffffff;
+  border: 1px solid var(--secondary-color1);
+  border-radius: 12px;
+  padding: 25px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.contact-card .card-icon {
+  width: 55px;
+  height: 55px;
+  background-color: var(--main-color);
+  color: var(--secondary-color3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border: 1px solid var(--secondary-color1);
+  transition: all 0.4s ease;
+} 
+
+.contact-card h3 {
+  font-size: 1.1rem;
+  color: var(--secondary-color3);
+  margin-bottom: 5px;
+}
+
+.contact-card p {
+  font-size: 0.85rem;
+  color: #666666;
+  direction: ltr; /* لضمان عرض اليوزر نيم والإيميل بشكل صحيح */
+}
+
+/* تأثير عند التمرير على البطاقة */
+.contact-card:hover {
+  transform: translateY(-5px);
+  background-color: #ffffff;
+  border-color: var(--secondary-color3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card:hover .card-icon {
+  background-color: var(--secondary-color3);
+  color: #ffffff;
+}
+/* end contact section */
+
+/* starat footer  */
+footer {
+  background-color: var(--secondary-color3);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid var(--secondary-color2);
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+footer strong {
+  color: var(--main-color);
+}
+/* end footer  */
 

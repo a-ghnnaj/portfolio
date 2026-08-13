@@ -1,56 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <!-- وسم الأرشفة: يخبر محركات البحث بأرشفة الموقع ومتابعة الروابط -->
     <meta name="robots" content="index, follow" />
-    
-    <!-- كود إثبات ملكية الموقع لدى Google Search Console (سطر واحد يكفي) -->
-    <meta name="google-site-verification" content="yUy9NgOVCRoQ5fKHahSEfCzEsQ-zGRv5YT9wauygy7w" />
 
-    <!-- اسم الكاتب (صاحب الموقع) -->
+    <!-- كود إثبات ملكية الموقع لدى Google Search Console -->
+    <meta
+      name="google-site-verification"
+      content="yUy9NgOVCRoQ5fKHahSEfCzEsQ-zGRv5YT9wauygy7w"
+    />
+
+    <!-- اسم الكاتب -->
     <meta name="author" content="أنس غناج" />
 
-    <!-- عنوان الصفحة المحدث: تظهر فيه الكلمات الأكثر بحثاً (اسمك وتخصصك) -->
+    <!-- عنوان الصفحة -->
     <title>أنس غناج | موقع شخصي، معرض أعمال وسيرة ذاتية</title>
 
-    <!-- وصف الموقع المحسن: طوله مثالي لمحركات البحث ويشجع الزوار على الضغط والدخول -->
+    <!-- وصف الموقع -->
     <meta
       name="description"
       content="الموقع الشخصي للمطور أنس غناج. تصفح معرض أعمالي وأحدث مشاريعي البرمجية، واطلع على سيرتي الذاتية وخبراتي المهنية لفرص التعاون والتواصل."
     />
 
-    <!-- الكلمات المفتاحية المحسنة والموسعة لتشمل اسمك الكامل بالكامل والبحث الشائع -->
+    <!-- الكلمات المفتاحية -->
     <meta
       name="keywords"
       content="أنس غناج, Anas Ghannaj, موقع أنس الشخصي, معرض أعمال أنس, سيرة ذاتية أنس غناج, مشاريع أنس غناج, مطور ويب, Anas portfolio, CV"
     />
 
-    <!-- 1. ملف Normalize أولاً -->
+    <!-- ملفات التنسيق والأيقونات -->
     <link rel="stylesheet" href="styles/Normalize.css" />
-
     <link rel="stylesheet" href="styles/style.css" />
-
-    <link rel="icon" href="images/page-icon.png" />
-
-    <!-- 3. رابط Font Awesome -->
+    <link rel="icon" href="images/page-icon.PNG" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
 
-
-
   <body>
-    <!-- Start of header -->
+    <!-- Start Header -->
     <header>
       <div class="container">
         <div class="logo">
           <a href="index.html">
-            <img id="first-logo" src="images/page-icon.png" alt="شعار الموقع" />
+            <img id="first-logo" src="images/page-icon.PNG" alt="شعار الموقع" />
           </a>
         </div>
 
@@ -64,12 +60,17 @@
             </li>
             <li>
               <a href="#skills">
-                <i class="fa-solid fa-user-gear"></i>المهارات
+                <i class="fa-solid fa-user-gear"></i> المهارات
               </a>
             </li>
             <li>
               <a href="#projects">
                 <i class="fa-solid fa-diagram-project"></i> مشاريعي
+              </a>
+            </li>
+            <li>
+              <a href="#development-principles">
+                <i class="fa-solid fa-lightbulb"></i> مبادئي في التعلم والتطوير
               </a>
             </li>
             <li>
@@ -81,9 +82,9 @@
         </nav>
       </div>
     </header>
-    <!-- end of header -->
+    <!-- End Header -->
 
-    <!-- start of hero -->
+    <!-- Start Hero Section -->
     <section class="hero">
       <div class="container">
         <div class="hero-info">
@@ -105,11 +106,11 @@
           </div>
         </div>
         <div class="hero-img">
-          <img src="images/personal-picture.png" alt="صورة أنس" />
+          <img src="images/personal-picture.PNG" alt="صورة أنس" />
         </div>
       </div>
     </section>
-    <!-- end of hero -->
+    <!-- End Hero Section -->
 
     <!-- Start About Section -->
     <section class="about" id="about">
@@ -164,10 +165,10 @@
       </div>
     </section>
     <!-- End About Section -->
+
     <!-- Start Skills Section -->
     <section class="skills" id="skills">
       <div class="container">
-        <!-- عنوان القسم فقط -->
         <div class="section-title">
           <h2>
             المهارات والأدوات <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -175,9 +176,7 @@
           <p>التقنيات التي أستخدمها والأدوات التي أعمل على إتقانها</p>
         </div>
 
-        <!-- محتوى المهارات -->
         <div class="skills-content">
-          <!-- التقنيات الحالية -->
           <div class="tools">
             <h3>التقنيات والأدوات الحالية:</h3>
             <ul class="skills-badges">
@@ -189,7 +188,6 @@
             </ul>
           </div>
 
-          <!-- قيد التعلم -->
           <div class="learning">
             <h3>قيد التعلم والتركيز الحالي:</h3>
             <ul class="skills-badges">
@@ -202,16 +200,15 @@
                 Front-End Development <i class="fa-solid fa-layer-group"></i>
               </li>
             </ul>
-            <!-- تم إضافة الإغلاق هنا -->
           </div>
         </div>
       </div>
     </section>
     <!-- End Skills Section -->
+
     <!-- Start Projects Section -->
     <section class="projects" id="projects">
       <div class="container">
-        <!-- عنوان القسم -->
         <div class="section-title">
           <h2>المشاريع <i class="fa-solid fa-diagram-project"></i></h2>
           <p>
@@ -231,12 +228,11 @@
             <h3>الموقع الشخصي والمدونة</h3>
             <p>
               موقع ويب شخصي متجاوب تم بناؤه من الصفر باستخدام HTML5 و CSS3 دون
-              الاعتماد على أطر عمل جاهزة. يهدف الموقع لتطبيق ما أتعلمه عملياً，
+              الاعتماد على أطر عمل جاهزة. يهدف الموقع لتطبيق ما أتعلمه عملياً،
               توثيق مساري الأكاديمي في الهندسة المعلوماتية، ومشاركة الشروحات
               البرمجية وتجاربي التقنية.
             </p>
 
-            <!-- تقنيات المشروع -->
             <ul class="skills-badges">
               <li>HTML5 <i class="fa-brands fa-html5"></i></li>
               <li>CSS3 <i class="fa-brands fa-css3-alt"></i></li>
@@ -247,7 +243,6 @@
               <li>Git & GitHub <i class="fa-brands fa-git-alt"></i></li>
             </ul>
 
-            <!-- روابط المشروع الحقيقية -->
             <div class="project-links">
               <a
                 href="https://github.com/a-ghnnaj/portfolio"
@@ -312,5 +307,138 @@
       </div>
     </section>
     <!-- End Projects Section -->
+
+    <!-- Start Development Principles Section -->
+    <section class="development-principles" id="development-principles">
+      <div class="container">
+        <div class="section-title">
+          <h2>مبادئي في التعلم والتطوير <i class="fa-solid fa-lightbulb"></i></h2>
+          <p>القواعد والمنهجية التي أعتمد عليها في مساري الأكاديمي والبرمجي.</p>
+        </div>
+
+        <div class="principles-grid">
+          <!-- بطاقة 1 -->
+          <div class="principle-card">
+            <div class="card-icon">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <h3>التأسيس البرمجي العميق</h3>
+            <p>
+              التركيز على فهم كيف تعمل البرمجيات تحت الغطاء (Under the Hood)، بدءاً من إدارة الذاكرة والتفكير الخوارزمي بـ C++، قبل الاعتماد على أطر العمل والأدوات الجاهزة.
+            </p>
+          </div>
+
+          <!-- بطاقة 2 -->
+          <div class="principle-card">
+            <div class="card-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>جودة الكود وتنظيمه</h3>
+            <p>
+              الالتزام بمبادئي كتابة الكود النظيف (Clean Code)، تنظيم هيكلية الملفات، واستخدام Git و GitHub بشكل مستمر لتوثيق وتتبع كل مرحلة من مراحل التطور.
+            </p>
+          </div>
+
+          <!-- بطاقة 3 -->
+          <div class="principle-card">
+            <div class="card-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>الاستمرارية والتعلم الذاتي</h3>
+            <p>
+              الإيمان بأن الهندسة مهارة متجددة تتطلب التدريب اليومي على حل المشكلات (Problem Solving)، وبناء المشاريع العملية لمواكبة أفضل الممارسات.
+            </p>
+          </div>
+
+          <!-- بطاقة 4 -->
+          <div class="principle-card">
+            <div class="card-icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3>التعاون والمشاركة</h3>
+            <p>
+              أقدر العمل الجماعي والتعاون مع الآخرين، حيث أن تبادل المعرفة والخبرات يعزز من جودة المشاريع ويطور من مهاراتي الشخصية.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Development Principles Section -->
+     <!-- start contact sction -->
+     <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+      <h2>تواصل معي <i class="fa-solid fa-paper-plane"></i></h2>
+      <p>يسعدني تواصلك معي عبر البريد الإلكتروني أو منصات التواصل الاجتماعي التالية:</p>
+    </div>
+    <div class="contact-grid">
+      <a href="mailto:saad.anass.1996@gmail.com" class="contact-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <h3>البريد الإلكتروني</h3>
+        <p>saad.anass.1996@gmail.com</p>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/a-ghnnaj" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="card-icon">
+          <i class="fa-brands fa-github"></i>
+        </div>
+        <h3>GitHub</h3>
+        <p>a-ghnnaj</p>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/anas-ghnnaj" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="card-icon">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        <h3>LinkedIn</h3>
+        <p>anas-ghnnaj</p>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@Anas_ghnnaj" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="card-icon">
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+        <h3>YouTube</h3>
+        <p>@Anas_ghnnaj</p>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/a.ghnnaj/" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="card-icon">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <h3>Instagram</h3>
+        <p>@a.ghnnaj</p>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/a.ghnnaj/" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="card-icon">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <h3>Facebook</h3>
+        <p>a.ghnnaj</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>جميع الحقوق محفوظة &copy; 2026 <strong>أنس غناج</strong></p>
+  </div>
+</footer>
+    </div>
+      </div>
+     </section>
+  <!-- end contact sction -->
   </body>
 </html>
